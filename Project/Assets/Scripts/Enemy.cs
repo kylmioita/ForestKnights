@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform Player;
     bool chase;
+    public float timer = 0;
+    bool timerOn = false;
 
     void Start()
     {
@@ -21,8 +23,15 @@ public class Enemy : MonoBehaviour
         if (chase == true)
         {
             enemy.SetDestination(Player.position);
-            enemy.speed = 20f;
+            enemy.speed = 5f;
         }
+        if (timerOn == true)
+        {
+        timer += Time.deltaTime;
+        Debug.Log(timer);
+        }
+        Debug.Log(timer);
+
     }
 
     public Vector3 RandomNavmeshLocation(float radius)
@@ -53,11 +62,18 @@ public class Enemy : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && timer >= 5)
         {
+            timerOn = false;
             chase = false;
             Move();
-            enemy.speed = 10f;
+            enemy.speed = 5f;
+        }
+        if (other.CompareTag("Player") && timer <= 5)
+        {
+            timerOn = true;
+            chase = true;
+            timer = 0;
         }
     }
 }
