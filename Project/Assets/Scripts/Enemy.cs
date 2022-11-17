@@ -9,13 +9,8 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent enemy;
     public Transform Player;
     bool chase;
-<<<<<<< Updated upstream:Project/Assets/Scripts/Enemy.cs
-    public float timer = 0;
-    bool timerOn = false;
-=======
     public float timer = 5;
     bool timerOn;
->>>>>>> Stashed changes:Project/Assets/Enemy.cs
 
     void Start()
     {
@@ -29,29 +24,17 @@ public class Enemy : MonoBehaviour
         if (chase == true)
         {
             enemy.SetDestination(Player.position);
-<<<<<<< Updated upstream:Project/Assets/Scripts/Enemy.cs
             enemy.speed = 5f;
-=======
-            enemy.speed = 10f;
         }
 
         if (timerOn == true)
         {
             timer = timer - Time.deltaTime;
         }
-
-        if (timer < 0)
-        {
-            chase = false; 
-            Move();
->>>>>>> Stashed changes:Project/Assets/Enemy.cs
-        }
         if (timerOn == true)
         {
         timer += Time.deltaTime;
-        Debug.Log(timer);
         }
-        Debug.Log(timer);
 
     }
 
@@ -85,24 +68,12 @@ public class Enemy : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") && timer >= 5)
+        if (other.CompareTag("Player"))
         {
-<<<<<<< Updated upstream:Project/Assets/Scripts/Enemy.cs
             timerOn = false;
             chase = false;
             Move();
             enemy.speed = 5f;
-        }
-        if (other.CompareTag("Player") && timer <= 5)
-        {
-            timerOn = true;
-            chase = true;
-            timer = 0;
-=======
-            timerOn = true;
-            chase = true;
-            enemy.speed = 5f;
->>>>>>> Stashed changes:Project/Assets/Enemy.cs
         }
     }
 }
