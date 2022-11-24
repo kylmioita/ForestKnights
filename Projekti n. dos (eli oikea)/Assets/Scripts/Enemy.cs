@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     bool chase;
     public float timer;
     bool timerOn;
+    public Animator animator;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        animator.SetFloat("move", enemy.speed);
         if (chase == true)
         {
             enemy.SetDestination(Player.position);
