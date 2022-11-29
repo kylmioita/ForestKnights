@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Throwing : MonoBehaviour
+public class throwing : MonoBehaviour
 {
     [Header("References")]
     public Transform cam;
