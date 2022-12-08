@@ -8,7 +8,6 @@ public class Damage : MonoBehaviour
     float lastdamaged = 1;
     public void Update()
     {
-        Debug.Log(lastdamaged);
         lastdamaged = lastdamaged - Time.deltaTime;
     }
 
