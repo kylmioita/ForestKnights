@@ -23,12 +23,14 @@ public class PlayerManager : MonoBehaviour
     public void ReplayLevel()
     {
         SceneManager.LoadScene("AI");
+        gameOverScreen.SetActive(false);
         Health.dead = false;
     }
 
     public void ExitButton()
     {
         SceneManager.LoadScene("Menu");
+        gameOverScreen.SetActive(false);
         Health.dead = false;
     }
 }
