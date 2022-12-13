@@ -18,6 +18,9 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             dead = true;
+            SceneManager.LoadScene("DeathMenu");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
     public void TakeDamage(float _damage)
