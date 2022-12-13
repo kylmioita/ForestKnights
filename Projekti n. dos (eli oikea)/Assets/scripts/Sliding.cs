@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sliding : MonoBehaviour
+public class Sliding : MonoBehaviour
 {
     [Header("References")]
     public Transform orientation;
