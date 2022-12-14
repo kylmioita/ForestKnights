@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class Score : MonoBehaviour
         {
             return;
         }
-        text.text = score.ToString() + "/10";
+        if (score == 15)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
+        text.text = score.ToString() + "/15";
     }       
 }
