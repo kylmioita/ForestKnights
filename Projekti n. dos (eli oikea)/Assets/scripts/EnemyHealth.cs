@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
         if (enemyCurrentHealth <= 0)
         {
             enemyDead = true;
+            Score.score++;
             Destroy (this.gameObject);
         }
     }

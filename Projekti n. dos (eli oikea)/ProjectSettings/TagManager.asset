@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - DamageTrigger
+  - GameScore
   layers:
   - Default
   - TransparentFX
