@@ -18,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
     }
     public void Update()
     {
-        Debug.Log(timer);
         if (timerOn == true)
         {
             timer = timer - Time.deltaTime;
