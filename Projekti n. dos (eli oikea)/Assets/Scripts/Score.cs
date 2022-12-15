@@ -24,10 +24,12 @@ public class Score : MonoBehaviour
         {
             return;
         }
-        if (score == 15)
+        if (score == 10)
         {
             SceneManager.LoadScene("WinScreen");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
-        text.text = score.ToString() + "/15";
+        text.text = score.ToString() + "/10";
     }       
 }

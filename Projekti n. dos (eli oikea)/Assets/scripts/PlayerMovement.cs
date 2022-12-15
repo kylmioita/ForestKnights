@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         
-        else if (Input.GetKeyDown(crouchKey)) ;
+        else if (Input.GetKeyDown(crouchKey))
         {
             state = MovementState.crouching;
             desiredMoveSpeed = crouchSpeed;
