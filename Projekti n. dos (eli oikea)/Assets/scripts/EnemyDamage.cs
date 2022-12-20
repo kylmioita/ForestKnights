@@ -7,6 +7,7 @@ public class EnemyDamage : MonoBehaviour
     public float enemyDamage;
     public GameObject enemy;
     float enemyLastDamaged = 1;
+
     public void Update()
     {
         enemyLastDamaged = enemyLastDamaged - Time.deltaTime;

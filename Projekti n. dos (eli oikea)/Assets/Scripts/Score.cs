@@ -30,6 +30,6 @@ public class Score : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }
-        text.text = score.ToString() + "/10";
+        text.text ="Enemies killed: " + score.ToString() + "/10";
     }       
 }

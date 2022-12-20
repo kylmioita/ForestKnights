@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDamage: 50
   enemy: {fileID: 20962472652910082}
+  animator: {fileID: 0}
 --- !u!1 &903834377430827751
 GameObject:
   m_ObjectHideFlags: 0
