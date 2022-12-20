@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-    public void PlayAgain()
+    public void ReplayLevel()
     {
+        Health.dead = false;
         SceneManager.LoadScene("AI");
-
     }
-    public void BackToMenu()
+
+    public void ExitButton()
     {
         SceneManager.LoadScene("Menu");
+        Health.dead = false;
     }
 }

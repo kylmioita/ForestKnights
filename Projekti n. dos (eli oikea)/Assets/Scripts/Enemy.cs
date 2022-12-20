@@ -7,14 +7,15 @@ public class Enemy : MonoBehaviour
 {
 
     public NavMeshAgent enemy;
-    public Transform Player;
     bool chase;
     public float timer;
     bool timerOn;
     public Animator animator;
+    public Transform Player;
 
     void Start()
     {
+        Player = GameObject.Find("Player").transform;
         Move();
         timer = 0;
     }
